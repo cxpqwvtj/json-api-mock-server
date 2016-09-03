@@ -39,7 +39,7 @@ export function resetErrorMessage() {
   }
 }
 
-export const loadLogs = () => action(LOAD_LOGS, {endpoint: '/api/timber/list', method: 'GET'})
+export const loadLogs = () => action(LOAD_LOGS, {endpoint: '/mock/api/timber/list', method: 'GET'})
 export const createTrail = () => {
   const param = {
     endpoint: '/mock/api/trail/create',

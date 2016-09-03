@@ -5,7 +5,7 @@ export default store => next => action => {
   const state = store.getState()
   const actionKey = 'action'
   const messageKey = 'message'
-  fetch('/api/trail/create', {
+  fetch('/mock/api/trail/create', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
