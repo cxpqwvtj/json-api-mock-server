@@ -1,0 +1,23 @@
+import React, { Component, PropTypes } from 'react'
+import { RaisedButton } from 'material-ui'
+
+export default class MainContent extends Component {
+
+  static propTypes = {
+    handleUrlChange: PropTypes.func.isRequired,
+    children: PropTypes.node,
+    handleTest: PropTypes.func.isRequired
+  }
+
+  render() {
+    return (
+      <div>
+        <div style={{margin: 10, display: 'flex', justifyContent: 'flex-start'}}>
+          <RaisedButton label="LOG LIST" onMouseUp={this.props.handleUrlChange.bind(null, '/mock/timber/list')} />
+          <RaisedButton label="CREATE TRAIL" onMouseUp={this.props.handleTest} style={{marginLeft: '10px'}} />
+        </div>
+        {this.props.children}
+      </div>
+    )
+  }
+}
